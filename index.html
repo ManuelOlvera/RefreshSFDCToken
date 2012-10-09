@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Heroku</title>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/forcetk.js"></script>
+    <script type="text/javascript" src="js/salesforce.js"></script>
+    <script type="text/javascript">
+        var sf = new salesforce('web_app','sandbox');
+        console.log(sf);
+        sf.client.apexrest( '/kio/v1.0/getNews', function(response){
+                console.log('news loaded and saved successfully');
+                console.log(JSON.parse(response));
+
+            }, function(response){
+                // error
+                console.log('load news error: ');
+                console.log(response);
+
+            }, 'GET', null, null);
+    </script>
+</head>
+<body>
+    Calling Salforce...
+</body>
+</html>
