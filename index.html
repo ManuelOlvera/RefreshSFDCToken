@@ -21,6 +21,7 @@
                     console.log('load news error: ');
                     console.log(response);
                     $('#responseSFDC').append('<p>Error</p>');
+                    $('#responseSFDC').append('<p>'+response+'</p>');
 
                 }, 'GET', null, null);
         }

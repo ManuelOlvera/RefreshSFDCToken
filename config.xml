@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.phonegap.CallingSFDCMobileApp"
+	id		= "com.phonegap.RefreshSFDCToken"
 	version 	= "0.0.1">
 
-	<name>CallingSFDCMobileApp</name>
+	<name>RefreshSFDCToken</name>
 
 	<description>
 		Calling SFDC from a Mobile
 	</description>
 
 	<author href="http://www.makepositive.com" email="manuel.olvera@makepositive.com">
-		ALESSIO VALENTINI - MANUEL OLVERA @ Makepositive
+		MANUEL OLVERA @ Makepositive
 	</author>
 
 	<preference name="phonegap-version" value="2.0.0" />
