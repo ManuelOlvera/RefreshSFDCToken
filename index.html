@@ -12,20 +12,25 @@
             var sf = new salesforce('web_app','sandbox');
             console.log(sf);
             sf.client.apexrest( '/kio/v1.0/getNews', function(response){
-                    console.log('news loaded and saved successfully');
+                    console.log('Success');
                     console.log(JSON.parse(response));
+                    $('#responseSFDC').append('<p>Success</p>');
 
                 }, function(response){
                     // error
                     console.log('load news error: ');
                     console.log(response);
+                    $('#responseSFDC').append('<p>Error</p>');
 
                 }, 'GET', null, null);
         }
     </script>
 </head>
 <body>
-    Call SFDC to refresh the session token <br/>
-    <button onclick="callSFDC()">Click me</button>
+    <p>
+        Call SFDC to refresh the session token <br/>
+        <button onclick="callSFDC()">Click me</button>
+    </p>
+    <p id="responseSFDC"></p>
 </body>
 </html>
