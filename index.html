@@ -8,21 +8,24 @@
     <script type="text/javascript" src="js/salesforce.js"></script>    
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript">
-        var sf = new salesforce('web_app','sandbox');
-        console.log(sf);
-        sf.client.apexrest( '/kio/v1.0/getNews', function(response){
-                console.log('news loaded and saved successfully');
-                console.log(JSON.parse(response));
+        function callSFDC() {
+            var sf = new salesforce('web_app','sandbox');
+            console.log(sf);
+            sf.client.apexrest( '/kio/v1.0/getNews', function(response){
+                    console.log('news loaded and saved successfully');
+                    console.log(JSON.parse(response));
 
-            }, function(response){
-                // error
-                console.log('load news error: ');
-                console.log(response);
+                }, function(response){
+                    // error
+                    console.log('load news error: ');
+                    console.log(response);
 
-            }, 'GET', null, null);
+                }, 'GET', null, null);
+        }
     </script>
 </head>
 <body>
-    Calling Salforce...
+    Call SFDC to refresh the session token <br/>
+    <button onclick="callSFDC()">Click me</button>
 </body>
 </html>
